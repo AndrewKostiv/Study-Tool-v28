@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdstxtccagjn3"]
+[gd_scene load_steps=3 format=3 uid="uid://bdstxtccagjn3"]
 
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_bsnkv"]
 [ext_resource type="Script" uid="uid://ctxt0kddl18u4" path="res://Menues/Edit Deck Menu/Card Display/card_display.gd" id="1_hqjse"]
 
 [node name="CardDisplay" type="Control"]
@@ -10,6 +11,7 @@ anchor_bottom = 0.0767531
 offset_bottom = 0.264
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_bsnkv")
 script = ExtResource("1_hqjse")
 metadata/_edit_use_anchors_ = true
 

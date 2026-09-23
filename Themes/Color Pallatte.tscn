@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk8jeuqmi3fha"]
+
+[ext_resource type="Script" uid="uid://b2v4edw7c0pud" path="res://Themes/color_pallatte.gd" id="1_8pblj"]
+
+[node name="ColorPallatte" type="Node"]
+script = ExtResource("1_8pblj")
+darkBlue = Color(0.101961, 0.137255, 0.168627, 1)
+lightBlue = Color(0.208, 0.267733, 0.32, 0.72549)
+border = Color(0.3519, 0.444125, 0.51, 1)
+text = Color(1, 1, 1, 1)

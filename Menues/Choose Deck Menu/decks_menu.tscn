@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0i7c6sf63oqo"]
+[gd_scene load_steps=4 format=3 uid="uid://d0i7c6sf63oqo"]
 
 [ext_resource type="Script" uid="uid://thwprcqgbxsf" path="res://Menues/Choose Deck Menu/decks_menu.gd" id="1_6cmlh"]
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_xjlf7"]
 [ext_resource type="Script" uid="uid://c8m5vvua1gnv4" path="res://Utilities/UserInput.gd" id="2_85ssn"]
 
 [node name="Decks Menu" type="Control"]
@@ -10,7 +11,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_xjlf7")
 script = ExtResource("1_6cmlh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1

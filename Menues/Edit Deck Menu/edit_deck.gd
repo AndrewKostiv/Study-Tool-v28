@@ -1,8 +1,8 @@
 class_name EditDeck extends Control
 
 @onready var deck:Deck = Global.data.activeDeck
-@onready var deck_name: LineEdit = %"Deck Name"
-@onready var cards_container: VBoxContainer = %"Cards Container"
+@export var deck_name: LineEdit
+@export var cards_container: VBoxContainer
 const CARD_DISPLAY = preload("res://Menues/Edit Deck Menu/Card Display/Card Display.tscn")
 
 func _ready() -> void:

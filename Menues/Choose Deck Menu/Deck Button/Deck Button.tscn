@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxwtdnvuepgt3"]
+[gd_scene load_steps=3 format=3 uid="uid://cxwtdnvuepgt3"]
 
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_palm7"]
 [ext_resource type="Script" uid="uid://bv4gih0jmgk80" path="res://Menues/Choose Deck Menu/Deck Button/deck_button.gd" id="1_xdvni"]
 
 [node name="DeckButton" type="Control"]
@@ -10,6 +11,7 @@ anchor_bottom = 0.154321
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_palm7")
 script = ExtResource("1_xdvni")
 metadata/_edit_use_anchors_ = true
 
