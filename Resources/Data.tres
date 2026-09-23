@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Data" load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://Resources/Deck.gd" id="1_fvb0g"]
+[ext_resource type="Script" path="res://Resources/data.gd" id="1_my77b"]
+[ext_resource type="Script" path="res://Resources/Card.gd" id="2_tqv0o"]
+
+[sub_resource type="Resource" id="Resource_tqv0o"]
+script = ExtResource("2_tqv0o")
+question = "1"
+answer = "one"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_7bkt0"]
+script = ExtResource("2_tqv0o")
+question = "2"
+answer = "two"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_pjtvt"]
+script = ExtResource("2_tqv0o")
+question = "3"
+answer = "three"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_n0rh4"]
+script = ExtResource("2_tqv0o")
+question = "4"
+answer = "four"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_cbanl"]
+script = ExtResource("2_tqv0o")
+question = "5"
+answer = "five"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_aaq2i"]
+script = ExtResource("2_tqv0o")
+question = "6"
+answer = "six"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_vns0l"]
+script = ExtResource("2_tqv0o")
+question = "7"
+answer = "seven"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_5s526"]
+script = ExtResource("2_tqv0o")
+question = "8"
+answer = "eight"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_hx8lo"]
+script = ExtResource("2_tqv0o")
+question = "9"
+answer = "nine"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_udnh4"]
+script = ExtResource("2_tqv0o")
+question = "10"
+answer = "ten"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_08btc"]
+script = ExtResource("1_fvb0g")
+deckName = "deck 1"
+cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_tqv0o"), SubResource("Resource_7bkt0"), SubResource("Resource_pjtvt"), SubResource("Resource_n0rh4"), SubResource("Resource_cbanl"), SubResource("Resource_aaq2i"), SubResource("Resource_vns0l"), SubResource("Resource_5s526"), SubResource("Resource_hx8lo"), SubResource("Resource_udnh4")])
+
+[resource]
+script = ExtResource("1_my77b")
+decks = Array[ExtResource("1_fvb0g")]([SubResource("Resource_08btc")])
+activeDeck = SubResource("Resource_08btc")
+metadata/_custom_type_script = "uid://cvf3512b6xrb1"

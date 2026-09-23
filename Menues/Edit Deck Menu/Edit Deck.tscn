@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://di75f2r14noph"]
+
+[ext_resource type="Script" uid="uid://b5rtiiakbhoad" path="res://Menues/Edit Deck Menu/edit_deck.gd" id="1_sk5as"]
+
+[node name="EditDeck" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sk5as")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.181187
+anchor_bottom = 0.146556
+offset_right = 0.272003
+offset_bottom = 0.0319977
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Add Deck" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.922852
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.00799561
+grow_horizontal = 2
+grow_vertical = 0
+text = "Add Card"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.181424
+anchor_right = 1.0
+anchor_bottom = 0.146111
+offset_bottom = 0.32
+grow_horizontal = 2
+text = "Edit Deck"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Deck Name" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.146605
+anchor_right = 1.0
+anchor_bottom = 0.264049
+offset_bottom = -0.104
+grow_horizontal = 2
+placeholder_text = "Deck Name"
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.263889
+anchor_right = 1.0
+anchor_bottom = 0.92284
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Cards Container" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Add Deck" to="." method="_on_add_deck_pressed"]
+[connection signal="text_changed" from="Deck Name" to="." method="_on_deck_name_text_changed"]
