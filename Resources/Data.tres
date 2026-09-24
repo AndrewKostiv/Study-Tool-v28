@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Data" load_steps=15 format=3]
+[gd_resource type="Resource" script_class="Data" load_steps=20 format=3]
 
 [ext_resource type="Script" path="res://Resources/Deck.gd" id="1_fvb0g"]
 [ext_resource type="Script" path="res://Resources/data.gd" id="1_my77b"]
@@ -64,10 +64,40 @@ question = "10"
 answer = "ten"
 isFavored = false
 
+[sub_resource type="Resource" id="Resource_r2bb4"]
+script = ExtResource("2_tqv0o")
+question = "11"
+answer = "eleven"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_ohtn6"]
+script = ExtResource("2_tqv0o")
+question = "12"
+answer = "twelve"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_pfjgl"]
+script = ExtResource("2_tqv0o")
+question = "13"
+answer = "thirteen"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_hkr70"]
+script = ExtResource("2_tqv0o")
+question = "14"
+answer = "fourteen"
+isFavored = false
+
+[sub_resource type="Resource" id="Resource_q7o8h"]
+script = ExtResource("2_tqv0o")
+question = "15"
+answer = "fifteen"
+isFavored = false
+
 [sub_resource type="Resource" id="Resource_08btc"]
 script = ExtResource("1_fvb0g")
 deckName = "deck 1"
-cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_tqv0o"), SubResource("Resource_7bkt0"), SubResource("Resource_pjtvt"), SubResource("Resource_n0rh4"), SubResource("Resource_cbanl"), SubResource("Resource_aaq2i"), SubResource("Resource_vns0l"), SubResource("Resource_5s526"), SubResource("Resource_hx8lo"), SubResource("Resource_udnh4")])
+cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_tqv0o"), SubResource("Resource_7bkt0"), SubResource("Resource_pjtvt"), SubResource("Resource_n0rh4"), SubResource("Resource_cbanl"), SubResource("Resource_aaq2i"), SubResource("Resource_vns0l"), SubResource("Resource_5s526"), SubResource("Resource_hx8lo"), SubResource("Resource_udnh4"), SubResource("Resource_r2bb4"), SubResource("Resource_ohtn6"), SubResource("Resource_pfjgl"), SubResource("Resource_hkr70"), SubResource("Resource_q7o8h")])
 
 [resource]
 script = ExtResource("1_my77b")
