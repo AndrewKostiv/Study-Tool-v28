@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqg8lbasw46rg"]
+
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_vy3xj"]
+[ext_resource type="Script" uid="uid://c5vxb6k6uawei" path="res://Study Modes/Multiple Choice/MC Answer Button/answer_button.gd" id="2_00wvf"]
+
+[node name="MC Answer Button" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_vy3xj")
+text = "Placeholder
+"
+autowrap_mode = 3
+script = ExtResource("2_00wvf")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

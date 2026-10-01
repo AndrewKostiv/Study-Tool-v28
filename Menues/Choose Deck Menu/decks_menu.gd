@@ -9,6 +9,7 @@ func _ready() -> void:
 
 func _on_user_input_text_submitted(newName: String) -> void:
 	addDeck(newName)
+	user_input.clear()
 
 func addDeck(newName:String) -> void:
 	var newDeck = Deck.new(newName)

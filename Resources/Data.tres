@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Data" load_steps=20 format=3]
+[gd_resource type="Resource" script_class="Data" load_steps=22 format=3]
 
 [ext_resource type="Script" path="res://Resources/Deck.gd" id="1_fvb0g"]
 [ext_resource type="Script" path="res://Resources/data.gd" id="1_my77b"]
@@ -99,8 +99,18 @@ script = ExtResource("1_fvb0g")
 deckName = "deck 1"
 cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_tqv0o"), SubResource("Resource_7bkt0"), SubResource("Resource_pjtvt"), SubResource("Resource_n0rh4"), SubResource("Resource_cbanl"), SubResource("Resource_aaq2i"), SubResource("Resource_vns0l"), SubResource("Resource_5s526"), SubResource("Resource_hx8lo"), SubResource("Resource_udnh4"), SubResource("Resource_r2bb4"), SubResource("Resource_ohtn6"), SubResource("Resource_pfjgl"), SubResource("Resource_hkr70"), SubResource("Resource_q7o8h")])
 
+[sub_resource type="Resource" id="Resource_fwobr"]
+script = ExtResource("1_fvb0g")
+deckName = "deck 2"
+cards = Array[ExtResource("2_tqv0o")]([])
+
+[sub_resource type="Resource" id="Resource_aiyy8"]
+script = ExtResource("1_fvb0g")
+deckName = "deck 3"
+cards = Array[ExtResource("2_tqv0o")]([])
+
 [resource]
 script = ExtResource("1_my77b")
-decks = Array[ExtResource("1_fvb0g")]([SubResource("Resource_08btc")])
+decks = Array[ExtResource("1_fvb0g")]([SubResource("Resource_08btc"), SubResource("Resource_fwobr"), SubResource("Resource_aiyy8")])
 activeDeck = SubResource("Resource_08btc")
 metadata/_custom_type_script = "uid://cvf3512b6xrb1"
