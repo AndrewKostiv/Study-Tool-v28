@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkygk15xlj1yi"]
+
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_kdyek"]
+[ext_resource type="Script" uid="uid://b6dlrklsdpktt" path="res://Study Modes/Study Mode Utils/study_mode_base.gd" id="1_ltxp2"]
+
+[node name="Study Mode Base" type="Control" node_paths=PackedStringArray("study_mode_title")]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 75.0
+grow_horizontal = 2
+theme = ExtResource("1_kdyek")
+script = ExtResource("1_ltxp2")
+study_mode_title = NodePath("VBoxContainer/Control/Study Mode Title")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 1.0
+offset_right = 0.135986
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Back" type="Button" parent="VBoxContainer/Control/MarginContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "<-- Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Study Mode Title" type="Label" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Study mode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/Control/MarginContainer/Back" to="." method="_on_back_pressed"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Data" load_steps=22 format=3]
+[gd_resource type="Resource" script_class="Data" load_steps=27 format=3]
 
 [ext_resource type="Script" path="res://Resources/Deck.gd" id="1_fvb0g"]
 [ext_resource type="Script" path="res://Resources/data.gd" id="1_my77b"]
@@ -9,100 +9,190 @@ script = ExtResource("2_tqv0o")
 question = "1"
 answer = "one"
 isFavored = false
+_timeArr = Array[int]([1811, 1410])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_7bkt0"]
 script = ExtResource("2_tqv0o")
 question = "2"
 answer = "two"
 isFavored = false
+_timeArr = Array[int]([1543, 1362])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_pjtvt"]
 script = ExtResource("2_tqv0o")
 question = "3"
 answer = "three"
 isFavored = false
+_timeArr = Array[int]([1951, 952])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_n0rh4"]
 script = ExtResource("2_tqv0o")
 question = "4"
 answer = "four"
 isFavored = false
+_timeArr = Array[int]([976, 1901])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_cbanl"]
 script = ExtResource("2_tqv0o")
 question = "5"
 answer = "five"
 isFavored = false
+_timeArr = Array[int]([876, 991])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_aaq2i"]
 script = ExtResource("2_tqv0o")
 question = "6"
 answer = "six"
 isFavored = false
+_timeArr = Array[int]([1803, 1402])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_vns0l"]
 script = ExtResource("2_tqv0o")
 question = "7"
 answer = "seven"
 isFavored = false
+_timeArr = Array[int]([759, 1167])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_5s526"]
 script = ExtResource("2_tqv0o")
 question = "8"
 answer = "eight"
 isFavored = false
+_timeArr = Array[int]([1643, 934])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_hx8lo"]
 script = ExtResource("2_tqv0o")
 question = "9"
 answer = "nine"
 isFavored = false
+_timeArr = Array[int]([1185, 1477])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_udnh4"]
 script = ExtResource("2_tqv0o")
 question = "10"
 answer = "ten"
 isFavored = false
+_timeArr = Array[int]([1168, 992])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_r2bb4"]
 script = ExtResource("2_tqv0o")
 question = "11"
 answer = "eleven"
 isFavored = false
+_timeArr = Array[int]([3077, 1909])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_ohtn6"]
 script = ExtResource("2_tqv0o")
 question = "12"
 answer = "twelve"
 isFavored = false
+_timeArr = Array[int]([2068, 2026])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_pfjgl"]
 script = ExtResource("2_tqv0o")
 question = "13"
 answer = "thirteen"
 isFavored = false
+_timeArr = Array[int]([2185, 3486])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_hkr70"]
 script = ExtResource("2_tqv0o")
 question = "14"
 answer = "fourteen"
 isFavored = false
+_timeArr = Array[int]([1750, 2310])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
 
 [sub_resource type="Resource" id="Resource_q7o8h"]
 script = ExtResource("2_tqv0o")
 question = "15"
 answer = "fifteen"
 isFavored = false
+_timeArr = Array[int]([3418, 4854])
+_accuracyArr = Array[int]([0, 100])
+isKnown = false
 
 [sub_resource type="Resource" id="Resource_08btc"]
 script = ExtResource("1_fvb0g")
 deckName = "deck 1"
 cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_tqv0o"), SubResource("Resource_7bkt0"), SubResource("Resource_pjtvt"), SubResource("Resource_n0rh4"), SubResource("Resource_cbanl"), SubResource("Resource_aaq2i"), SubResource("Resource_vns0l"), SubResource("Resource_5s526"), SubResource("Resource_hx8lo"), SubResource("Resource_udnh4"), SubResource("Resource_r2bb4"), SubResource("Resource_ohtn6"), SubResource("Resource_pfjgl"), SubResource("Resource_hkr70"), SubResource("Resource_q7o8h")])
 
+[sub_resource type="Resource" id="Resource_fnw8i"]
+script = ExtResource("2_tqv0o")
+question = "1"
+answer = "1"
+isFavored = false
+_timeArr = Array[int]([2242, 894])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
+
+[sub_resource type="Resource" id="Resource_xxiau"]
+script = ExtResource("2_tqv0o")
+question = "2"
+answer = "2"
+isFavored = false
+_timeArr = Array[int]([834, 1017])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
+
+[sub_resource type="Resource" id="Resource_hebxf"]
+script = ExtResource("2_tqv0o")
+question = "3"
+answer = "3"
+isFavored = false
+_timeArr = Array[int]([1435, 1185])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
+
+[sub_resource type="Resource" id="Resource_e0flm"]
+script = ExtResource("2_tqv0o")
+question = "4"
+answer = "4"
+isFavored = false
+_timeArr = Array[int]([1166, 1300])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
+
+[sub_resource type="Resource" id="Resource_tvo2n"]
+script = ExtResource("2_tqv0o")
+question = "5"
+answer = "5"
+isFavored = false
+_timeArr = Array[int]([617, 2402])
+_accuracyArr = Array[int]([100, 100])
+isKnown = true
+
 [sub_resource type="Resource" id="Resource_fwobr"]
 script = ExtResource("1_fvb0g")
 deckName = "deck 2"
-cards = Array[ExtResource("2_tqv0o")]([])
+cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_fnw8i"), SubResource("Resource_xxiau"), SubResource("Resource_hebxf"), SubResource("Resource_e0flm"), SubResource("Resource_tvo2n")])
 
 [sub_resource type="Resource" id="Resource_aiyy8"]
 script = ExtResource("1_fvb0g")

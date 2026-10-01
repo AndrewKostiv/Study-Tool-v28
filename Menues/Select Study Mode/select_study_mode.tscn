@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://g33tu54bffwv"]
+
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_0i3yd"]
+[ext_resource type="Script" uid="uid://cp6i7soixmw7a" path="res://Menues/Select Study Mode/select_study_mode.gd" id="1_job3o"]
+[ext_resource type="Script" uid="uid://unuq1mijvluq" path="res://Menues/Select Study Mode/Study Mode Buttons/mc_buttons.gd" id="3_7bx4p"]
+[ext_resource type="Script" uid="uid://dfiryrd1rumn2" path="res://Menues/Select Study Mode/mc_typing.gd" id="4_fc4o6"]
+
+[node name="SelectStudyMode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0i3yd")
+script = ExtResource("1_job3o")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0251736
+anchor_top = 0.0401235
+anchor_right = 0.160174
+anchor_bottom = 0.116123
+offset_right = 0.479996
+offset_bottom = -0.248001
+text = "<-- Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.123
+offset_bottom = 0.295998
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Select Study Mode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.123
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.295998
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MC Modes" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/MC Modes"]
+layout_mode = 2
+text = "Multiple Choice"
+horizontal_alignment = 1
+
+[node name="MC-Buttons" type="Button" parent="Control/MarginContainer/HBoxContainer/MC Modes"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Multiple Choice - Buttons"
+script = ExtResource("3_7bx4p")
+
+[node name="MC-Typing" type="Button" parent="Control/MarginContainer/HBoxContainer/MC Modes"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Multiple Choice - Typing"
+script = ExtResource("4_fc4o6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/MC Modes/MC-Buttons" to="Control/MarginContainer/HBoxContainer/MC Modes/MC-Buttons" method="_on_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/MC Modes/MC-Typing" to="Control/MarginContainer/HBoxContainer/MC Modes/MC-Typing" method="_on_pressed"]

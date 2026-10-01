@@ -1,19 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://ciahsa7paeaae"]
+[gd_scene load_steps=5 format=3 uid="uid://becxkrps4g60b"]
 
-[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_40pbl"]
-[ext_resource type="Script" uid="uid://xfap67oejg8h" path="res://Study Modes/Multiple Choice/multiple_choice.gd" id="1_bomn8"]
-[ext_resource type="Theme" uid="uid://ra0hb4pmo8ew" path="res://Themes/LightPanel.tres" id="3_irk7h"]
+[ext_resource type="Script" uid="uid://trl5vthviqu7" path="res://Study Modes/Multiple Choice - Typing/multiple_choice___typing.gd" id="1_3a62g"]
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_sr837"]
+[ext_resource type="PackedScene" uid="uid://dkygk15xlj1yi" path="res://Study Modes/Study Mode Utils/study_mode_base.tscn" id="3_e5m24"]
+[ext_resource type="Theme" uid="uid://ra0hb4pmo8ew" path="res://Themes/LightPanel.tres" id="4_e5m24"]
 
-[node name="MultipleChoice" type="Control" node_paths=PackedStringArray("answers_grid", "quesiton_label")]
+[node name="MultipleChoice-Typing" type="Control" node_paths=PackedStringArray("study_mode_base", "user_input", "quesiton_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_40pbl")
-script = ExtResource("1_bomn8")
-answers_grid = NodePath("VBoxContainer/Main/VBoxContainer/Answers Grid")
+theme = ExtResource("1_sr837")
+script = ExtResource("1_3a62g")
+study_mode_base = NodePath("VBoxContainer/Study Mode Base")
+user_input = NodePath("VBoxContainer/Main/VBoxContainer/UserInput")
 quesiton_label = NodePath("VBoxContainer/Main/VBoxContainer/MarginContainer/Panel/Quesiton Label")
 
 [node name="Panel" type="Panel" parent="."]
@@ -23,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -32,28 +35,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Header" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="Study Mode Base" parent="VBoxContainer" instance=ExtResource("3_e5m24")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Header"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.077
-offset_bottom = 47.15
-text = "Multiple Choice"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Back Button" type="Button" parent="VBoxContainer/Header"]
-layout_mode = 0
-offset_right = 145.0
-offset_bottom = 50.0
-text = "<-- Back"
-
 [node name="Main" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.395, 4.485)
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -75,7 +61,7 @@ theme_override_constants/margin_bottom = 30
 
 [node name="Panel" type="Panel" parent="VBoxContainer/Main/VBoxContainer/MarginContainer"]
 layout_mode = 2
-theme = ExtResource("3_irk7h")
+theme = ExtResource("4_e5m24")
 
 [node name="Quesiton Label" type="Label" parent="VBoxContainer/Main/VBoxContainer/MarginContainer/Panel"]
 layout_mode = 1
@@ -84,12 +70,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Answers Grid" type="GridContainer" parent="VBoxContainer/Main/VBoxContainer"]
+[node name="UserInput" type="LineEdit" parent="VBoxContainer/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-columns = 2
+placeholder_text = "Answer Here"
+alignment = 1
+keep_editing_on_text_submit = true
 
-[connection signal="pressed" from="VBoxContainer/Header/Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/Main/VBoxContainer/UserInput" to="." method="_on_user_input_text_submitted"]

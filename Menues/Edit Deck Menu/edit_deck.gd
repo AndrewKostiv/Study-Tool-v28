@@ -73,3 +73,7 @@ func _on_parce_string_add_pressed() -> void:
 
 func _on_parce_string_clear_pressed() -> void:
 	string_parce_text_edit.clear()
+
+
+func _on_study_deck_pressed() -> void:
+	SceneManager.changeSceneTo(SceneManager.SELECT_STUDY_MODE)

@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciahsa7paeaae"]
+
+[ext_resource type="Theme" uid="uid://i2hc07ir5iqq" path="res://Themes/MainTheme.tres" id="1_sfeia"]
+[ext_resource type="Script" uid="uid://xfap67oejg8h" path="res://Study Modes/Multiple Choice - Buttons/multiple_choice - Buttons.gd" id="2_631r2"]
+[ext_resource type="Theme" uid="uid://ra0hb4pmo8ew" path="res://Themes/LightPanel.tres" id="3_tj32a"]
+
+[node name="MultipleChoice" type="Control" node_paths=PackedStringArray("_answers_grid", "_quesiton_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sfeia")
+script = ExtResource("2_631r2")
+_answers_grid = NodePath("VBoxContainer/Main/VBoxContainer/Answers Grid")
+_quesiton_label = NodePath("VBoxContainer/Main/VBoxContainer/MarginContainer/Panel/Quesiton Label")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Back Button" type="Button" parent="VBoxContainer/Header"]
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 50.0
+text = "<-- Back"
+
+[node name="Label" type="Label" parent="VBoxContainer/Header"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.077
+offset_bottom = 47.15
+text = "Multiple Choice"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Main/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Main/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_tj32a")
+
+[node name="Quesiton Label" type="Label" parent="VBoxContainer/Main/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Answers Grid" type="GridContainer" parent="VBoxContainer/Main/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[connection signal="pressed" from="VBoxContainer/Header/Back Button" to="." method="_on_back_button_pressed"]
