@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dkygk15xlj1yi" path="res://Study Modes/Study Mode Utils/study_mode_base.tscn" id="3_e5m24"]
 [ext_resource type="Theme" uid="uid://ra0hb4pmo8ew" path="res://Themes/LightPanel.tres" id="4_e5m24"]
 
-[node name="MultipleChoice-Typing" type="Control" node_paths=PackedStringArray("study_mode_base", "user_input", "quesiton_label")]
+[node name="MultipleChoice-Typing" type="Control" node_paths=PackedStringArray("study_mode_base", "user_input", "quesiton_label", "answers_grid")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,7 @@ script = ExtResource("1_3a62g")
 study_mode_base = NodePath("VBoxContainer/Study Mode Base")
 user_input = NodePath("VBoxContainer/Main/VBoxContainer/UserInput")
 quesiton_label = NodePath("VBoxContainer/Main/VBoxContainer/MarginContainer/Panel/Quesiton Label")
+answers_grid = NodePath("VBoxContainer/Main/VBoxContainer/Answers Grid")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -75,9 +76,14 @@ text = "Placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UserInput" type="LineEdit" parent="VBoxContainer/Main/VBoxContainer"]
+[node name="Answers Grid" type="GridContainer" parent="VBoxContainer/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+columns = 2
+
+[node name="UserInput" type="LineEdit" parent="VBoxContainer/Main/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
 placeholder_text = "Answer Here"
 alignment = 1
 keep_editing_on_text_submit = true

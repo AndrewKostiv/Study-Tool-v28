@@ -1,8 +1,328 @@
-[gd_resource type="Resource" script_class="Data" load_steps=27 format=3]
+[gd_resource type="Resource" script_class="Data" load_steps=56 format=3]
 
 [ext_resource type="Script" path="res://Resources/Deck.gd" id="1_fvb0g"]
 [ext_resource type="Script" path="res://Resources/data.gd" id="1_my77b"]
 [ext_resource type="Script" path="res://Resources/Card.gd" id="2_tqv0o"]
+
+[sub_resource type="Resource" id="Resource_aiyy8"]
+script = ExtResource("2_tqv0o")
+question = "cpi"
+answer = "clock cycles / instructions"
+isFavored = false
+_timeArr = Array[int]([0, 29714])
+_accuracyArr = Array[int]([0, 100])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_fnw8i"]
+script = ExtResource("2_tqv0o")
+question = "frequency"
+answer = "1/cycle time"
+isFavored = false
+_timeArr = Array[int]([0, 7902])
+_accuracyArr = Array[int]([0, 100])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_xxiau"]
+script = ExtResource("2_tqv0o")
+question = "execution time"
+answer = "instrucitons * cpi * cycle time"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_hebxf"]
+script = ExtResource("2_tqv0o")
+question = "instructions"
+answer = "frequency / cpi"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_e0flm"]
+script = ExtResource("2_tqv0o")
+question = "total cycles"
+answer = "sum(instructions * cpi)"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_tvo2n"]
+script = ExtResource("2_tqv0o")
+question = "ms"
+answer = "10e-3"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_y2j20"]
+script = ExtResource("2_tqv0o")
+question = "us"
+answer = "10e-6"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_a04by"]
+script = ExtResource("2_tqv0o")
+question = "ns"
+answer = "10e-9"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_jpjb8"]
+script = ExtResource("2_tqv0o")
+question = "ps"
+answer = "10e-12"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_bimoa"]
+script = ExtResource("2_tqv0o")
+question = "fs"
+answer = "10e-12"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_6mhae"]
+script = ExtResource("2_tqv0o")
+question = "ADD"
+answer = "register + register"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_kvu21"]
+script = ExtResource("2_tqv0o")
+question = "ADDI"
+answer = "register + immediate"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_0kha4"]
+script = ExtResource("2_tqv0o")
+question = "SUB"
+answer = "register - register"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_4a1h1"]
+script = ExtResource("2_tqv0o")
+question = "SUBI"
+answer = "register - immediate"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_vfm10"]
+script = ExtResource("2_tqv0o")
+question = "SUBIS"
+answer = "subtract immediate and set condition flags"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_4n8oc"]
+script = ExtResource("2_tqv0o")
+question = "LDUR"
+answer = "load memory -> register"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_bbd4e"]
+script = ExtResource("2_tqv0o")
+question = "STUR"
+answer = "store register -> memory"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_tvdni"]
+script = ExtResource("2_tqv0o")
+question = "LSL"
+answer = "shift left"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_somte"]
+script = ExtResource("2_tqv0o")
+question = "LSR"
+answer = "shift right"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_c3827"]
+script = ExtResource("2_tqv0o")
+question = "MOVZ"
+answer = "put immediate into register"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_ievtb"]
+script = ExtResource("2_tqv0o")
+question = "MUL"
+answer = "multiply"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_e2twg"]
+script = ExtResource("2_tqv0o")
+question = "SDIV"
+answer = "divide"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_i2cri"]
+script = ExtResource("2_tqv0o")
+question = "B"
+answer = "unconditional branch"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_agn6o"]
+script = ExtResource("2_tqv0o")
+question = "B.cnd"
+answer = "conditional branch"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_ktcsw"]
+script = ExtResource("2_tqv0o")
+question = "R-format"
+answer = "Opcode 11, Rm 5, Shamt 6, Rn 5, Rd 5"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_48o0m"]
+script = ExtResource("2_tqv0o")
+question = "I-format"
+answer = "Opcode 10, Immediate 12, Rn 5, Rd 5"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_6yden"]
+script = ExtResource("2_tqv0o")
+question = "D-format"
+answer = "Opcode 11, Address 9, op 2, Rn 5, Rt 5"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_6k4ke"]
+script = ExtResource("2_tqv0o")
+question = "G"
+answer = "A and B"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_px7qu"]
+script = ExtResource("2_tqv0o")
+question = "P"
+answer = "A or B"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_wsij7"]
+script = ExtResource("2_tqv0o")
+question = "Ci"
+answer = "Gi-1 or (Pi-1 and Ci-1)"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_kvq2i"]
+script = ExtResource("2_tqv0o")
+question = "C0"
+answer = "0"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_qe3if"]
+script = ExtResource("2_tqv0o")
+question = "sum"
+answer = "Ai xor Bi xor Ci"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_osb3b"]
+script = ExtResource("2_tqv0o")
+question = "float addition"
+answer = "normalize, equalize exponents, add or sub significands, normalize"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_3hmc4"]
+script = ExtResource("2_tqv0o")
+question = "GA"
+answer = "G or (P and previous GA)"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_gax7j"]
+script = ExtResource("2_tqv0o")
+question = "PA"
+answer = "P and previous PA"
+isFavored = false
+_timeArr = Array[int]([0, 0])
+_accuracyArr = Array[int]([0, 0])
+isKnown = false
+
+[sub_resource type="Resource" id="Resource_fwobr"]
+script = ExtResource("1_fvb0g")
+deckName = "CS 320 Test 1"
+cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_aiyy8"), SubResource("Resource_fnw8i"), SubResource("Resource_xxiau"), SubResource("Resource_hebxf"), SubResource("Resource_e0flm"), SubResource("Resource_tvo2n"), SubResource("Resource_y2j20"), SubResource("Resource_a04by"), SubResource("Resource_jpjb8"), SubResource("Resource_bimoa"), SubResource("Resource_6mhae"), SubResource("Resource_kvu21"), SubResource("Resource_0kha4"), SubResource("Resource_4a1h1"), SubResource("Resource_vfm10"), SubResource("Resource_4n8oc"), SubResource("Resource_bbd4e"), SubResource("Resource_tvdni"), SubResource("Resource_somte"), SubResource("Resource_c3827"), SubResource("Resource_ievtb"), SubResource("Resource_e2twg"), SubResource("Resource_i2cri"), SubResource("Resource_agn6o"), SubResource("Resource_ktcsw"), SubResource("Resource_48o0m"), SubResource("Resource_6yden"), SubResource("Resource_6k4ke"), SubResource("Resource_px7qu"), SubResource("Resource_wsij7"), SubResource("Resource_kvq2i"), SubResource("Resource_qe3if"), SubResource("Resource_osb3b"), SubResource("Resource_3hmc4"), SubResource("Resource_gax7j")])
 
 [sub_resource type="Resource" id="Resource_tqv0o"]
 script = ExtResource("2_tqv0o")
@@ -144,63 +464,8 @@ script = ExtResource("1_fvb0g")
 deckName = "deck 1"
 cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_tqv0o"), SubResource("Resource_7bkt0"), SubResource("Resource_pjtvt"), SubResource("Resource_n0rh4"), SubResource("Resource_cbanl"), SubResource("Resource_aaq2i"), SubResource("Resource_vns0l"), SubResource("Resource_5s526"), SubResource("Resource_hx8lo"), SubResource("Resource_udnh4"), SubResource("Resource_r2bb4"), SubResource("Resource_ohtn6"), SubResource("Resource_pfjgl"), SubResource("Resource_hkr70"), SubResource("Resource_q7o8h")])
 
-[sub_resource type="Resource" id="Resource_fnw8i"]
-script = ExtResource("2_tqv0o")
-question = "1"
-answer = "1"
-isFavored = false
-_timeArr = Array[int]([2242, 894])
-_accuracyArr = Array[int]([100, 100])
-isKnown = true
-
-[sub_resource type="Resource" id="Resource_xxiau"]
-script = ExtResource("2_tqv0o")
-question = "2"
-answer = "2"
-isFavored = false
-_timeArr = Array[int]([834, 1017])
-_accuracyArr = Array[int]([100, 100])
-isKnown = true
-
-[sub_resource type="Resource" id="Resource_hebxf"]
-script = ExtResource("2_tqv0o")
-question = "3"
-answer = "3"
-isFavored = false
-_timeArr = Array[int]([1435, 1185])
-_accuracyArr = Array[int]([100, 100])
-isKnown = true
-
-[sub_resource type="Resource" id="Resource_e0flm"]
-script = ExtResource("2_tqv0o")
-question = "4"
-answer = "4"
-isFavored = false
-_timeArr = Array[int]([1166, 1300])
-_accuracyArr = Array[int]([100, 100])
-isKnown = true
-
-[sub_resource type="Resource" id="Resource_tvo2n"]
-script = ExtResource("2_tqv0o")
-question = "5"
-answer = "5"
-isFavored = false
-_timeArr = Array[int]([617, 2402])
-_accuracyArr = Array[int]([100, 100])
-isKnown = true
-
-[sub_resource type="Resource" id="Resource_fwobr"]
-script = ExtResource("1_fvb0g")
-deckName = "deck 2"
-cards = Array[ExtResource("2_tqv0o")]([SubResource("Resource_fnw8i"), SubResource("Resource_xxiau"), SubResource("Resource_hebxf"), SubResource("Resource_e0flm"), SubResource("Resource_tvo2n")])
-
-[sub_resource type="Resource" id="Resource_aiyy8"]
-script = ExtResource("1_fvb0g")
-deckName = "deck 3"
-cards = Array[ExtResource("2_tqv0o")]([])
-
 [resource]
 script = ExtResource("1_my77b")
-decks = Array[ExtResource("1_fvb0g")]([SubResource("Resource_08btc"), SubResource("Resource_fwobr"), SubResource("Resource_aiyy8")])
-activeDeck = SubResource("Resource_08btc")
+decks = Array[ExtResource("1_fvb0g")]([SubResource("Resource_08btc"), SubResource("Resource_fwobr")])
+activeDeck = SubResource("Resource_fwobr")
 metadata/_custom_type_script = "uid://cvf3512b6xrb1"

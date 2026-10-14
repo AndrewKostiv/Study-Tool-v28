@@ -65,6 +65,8 @@ func _on_parce_string_add_pressed() -> void:
 	var parced_by_card: = string_parce_text_edit.text.split("\n", false)
 	for line:String in parced_by_card:
 		var parced_by_qa = line.split(selectedDelimiter)
+		if parced_by_qa.size() < 2:
+			return
 		var newCard:Card = Card.new(parced_by_qa[0].strip_edges(), parced_by_qa[1].strip_edges())
 		deck.cards.append(newCard)
 	Global.saveData()
